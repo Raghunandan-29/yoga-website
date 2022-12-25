@@ -1,0 +1,780 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+.full{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.top-section{
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    width: 100%;
+    
+}
+.nav{
+    width: 100%;
+    background-image: linear-gradient(to bottom right, #000000 , #414141);
+    height: 100px;
+}
+.top-content{
+    width: 100%;
+    height: 900px;
+  }
+  .video-section{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #myVideo{
+    width: 100%;
+  }
+   .top-container{
+    width: 50%;
+    position: relative;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    top:-700px;
+    left: 100px;
+    
+  }
+  .top-text h2{
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 2px;
+    font-size: 62px;
+    font-weight: bold;
+    color: #fff;
+  
+  }
+  .top-text p{
+    color: #fff;
+    margin-top: 30px;
+    letter-spacing: 2px;
+    line-height: 50px;
+    font-size: 20px;
+  } 
+  
+  .top-content{
+  position: relative;
+  }
+
+
+
+html{
+	font-size: 10px;
+	font-family: "Roboto Cn", sans-serif;
+}
+
+a{
+	text-decoration: none;
+	color: #fff;
+}
+
+header{
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	position: relative;
+    overflow: hidden;
+}
+
+.container{
+	max-width: 120rem;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.menu-toggle{
+	position: relative;
+	top: 2.5rem;
+	right: 2.5rem;
+	color: #eb46f4;
+	font-size: 3rem;
+	cursor: pointer;
+	z-index: 1000;
+	display: none;
+}
+nav{
+	padding-top: 5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;
+	font-size: 1.6rem;
+}
+
+.brand{
+	font-size: 3rem;
+	font-weight: 300;
+	transform: translateX(-100rem);
+	animation: slideIn .5s forwards;
+}
+
+.brand span{
+	color: crimson;
+}
+
+nav ul{
+	display: flex;
+}
+
+nav ul li{
+	list-style: none;
+	transform: translateX(100rem);
+	animation: slideIn .5s forwards;
+}
+
+nav ul li:nth-child(1){
+	animation-delay: 0s;
+}
+
+nav ul li:nth-child(2){
+	animation-delay: .5s;
+}
+
+nav ul li:nth-child(3){
+	animation-delay: 1s;
+}
+
+nav ul li:nth-child(4){
+	animation-delay: 1.5s;
+}
+
+nav ul li a{
+	padding: 1rem 0;
+	margin: 0 3rem;
+	position: relative;
+	letter-spacing: 2px;
+}
+
+nav ul li a:last-child{
+	margin-right: 0;
+}
+
+nav ul li a::before,
+nav ul li a::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: crimson;
+	left: 0;
+	transform: scaleX(0);
+	transition: all .5s;
+}
+
+nav ul li a::before{
+	top: 0;
+	transform-origin: left;
+}
+
+nav ul li a::after{
+	bottom: 0;
+	transform-origin: right;
+}
+
+.overlay{
+	background-color: rgba(62, 222, 222, 0.95);
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	transition: opacity 650ms;
+	transform: scale(0);
+	opacity: 0;
+  display: none;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+	transform: scaleX(1);
+}
+
+@keyframes slideIn {
+	from{
+
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+
+@media screen and (max-width: 700px){
+
+	.menu-toggle{
+		display: block;
+	}
+
+	nav{
+		padding-top: 0;
+		display: none;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		height: 180px;
+		text-align: center;
+	}
+
+	nav ul{
+		flex-direction: column;
+	}
+
+	nav ul li{
+		margin-top: 15px;
+	}
+
+	nav ul li a{
+		margin: 0;
+		font-size: 16px;
+	}
+
+	.brand{
+		font-size: 28px;
+    margin-bottom: 10px;
+	}
+  
+  .overlay.menu-open,
+  nav.menu-open{
+	  display: flex;
+	  transform: scale(1);
+	  opacity: 1;
+  }
+  
+}
+.A-section{
+  width: 100%;
+  height: 560px;
+}
+.top-section-card{
+  width: 100%;
+  height: 500px;
+  padding-top: 90px;
+  display: flex;
+
+}
+.yoga-card{
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px Orgba(0,0,0, 0.25);
+  margin-left: 130px;
+  overflow: hidden;
+}
+.yoga-card .poster{
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+
+}
+.yoga-card .poster img{
+  width: 100%;
+  transition: 0.5s;
+  height: 400px;
+} 
+.yoga-card .poster::before{
+  content: '';
+  position: absolute;
+  bottom: -180px;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: 1;
+
+}
+.yoga-card:hover .poster img{
+  transition: translateY(-50px);
+  filter:blur(5px);
+}
+.yoga-card .details{
+  position: absolute;
+  width: 85%;
+  z-index: 2;
+  padding: 20px;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.yoga-card:hover .details h3{
+  opacity: 1;
+  visibility: visible;
+}
+.yoga-card:hover .details p{
+  opacity: 1;
+  visibility: visible;
+}
+.details h3{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 10px;
+  opacity: 0;
+  visibility: hidden;
+}
+.details p{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.mentor{
+	margin-top: 100px;
+  width: 100%;
+  background: linear-gradient(to right,#ddd6f3 ,#faaca8);
+	height: 600px;
+}
+.mentor h1{
+    text-align: center;
+	font-size: 50px;
+  margin-top: 30px;
+}
+.mentor-section{
+    display: flex;
+    flex-direction: row;
+	margin-top: 70px;
+    
+}
+.card{
+    position: relative;
+    width: 400px;
+    height: 350px;  
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    margin-left: 50px;
+}
+.card .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+.card .circle::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e66062;
+    clip-path: circle(120px at center);
+    transition: 0.5s;
+}
+.card:hover .circle:before{
+    clip-path: circle(400px at center);
+    background-color: rgb(216, 118, 221);
+
+}
+.card img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 200px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.card:hover img{
+    left: 75%;
+    top: 30%;
+    height:150px;
+}
+.card .content1{
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.card:hover .content1{
+    left: 0%;
+    opacity: 1;
+    visibility: visible;
+
+}
+.card .content1 h2{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1em;
+    padding-bottom: 30px;
+
+}
+.card .content1 p{
+    color: #fff;
+    font-size: 14px;
+}
+@media(max-width:991px){
+    .card{
+        width: auto;
+        max-width: 350px;
+        align-items: flex-start;
+        margin: 10px;
+    }
+    .card:hover{
+        height: 600px;
+    }
+    .card .content1{
+        width: 100%;
+        left: 0;
+        padding: 30px;
+    }
+    .card:hover img{
+        top:70%;
+        left: 50%;
+        height: 180px;
+    }
+}
+@media(max-width:420px){
+    .card .content1{
+        padding: 20px;
+    }
+}
+.mid-section{
+	display: flex;
+    width: 100%;
+    height: 700px;
+	
+}
+.left-section{
+    width: 42%;
+    margin-left: 100px;
+    background-color: #FAFAD2;
+    margin-bottom: 20px;
+}
+.lstext:nth-child(1){
+    padding-top: 80px;
+    font-size: 20px;
+  }
+.lstext{
+    margin-left: 80px;
+    font-size: 36px;
+    margin-top: 20px;
+  }
+.ttable{
+    display: flex;
+    flex-direction: column;
+    height: 510px;
+  
+}
+.wd{
+    width: 65%;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-left: 80px;
+    margin-top: 10px;
+  }
+.wd:nth-child(1){
+    margin-top: 50px;
+}
+.right-section{
+    width: 60%;
+    margin-right: 50px;
+}
+.right-section h3{
+    margin-top: 100px;
+    font-size: 20px;
+}
+.right-section h2{
+    margin-top: 20px;
+    font-size: 36px;
+}
+.right-section p{
+    margin-top: 25px;
+    font-size: 16px;
+}
+.rstext{
+    margin-left: 100px;
+}
+.container1{
+  width:60%;
+  margin: 20px auto;
+  margin-bottom: 200px;
+}
+.progress{
+  margin-top: 10px;
+  width: 100%;
+  height: 10px;
+  background-color: #e1d9d7;
+  border-radius: 10px;
+}
+.progress .progress-bar{
+  width: 0%;
+  opacity: 0;
+  height: 100%;
+  width: 600px;
+  height: 10px;
+  border-radius:5px;
+  border-radius: 10px;
+  position: relative;
+  transition: all 1s;
+}
+.progress-bar span{
+  height: 40px;
+  width: 40px;
+  font-size: 14px;
+  border-radius: 50%;
+  background: #fff;
+  float: right;
+  margin-top: -15px;
+  margin-right: -20px;
+  color: #222;
+  display: flex;
+  align-items: center;
+}
+#breathing{
+  background:linear-gradient(to right, #FC575E,#e8b7b7);
+}
+#meditation{
+  background: linear-gradient(to right, #62e678,#c0f6af);
+}
+#flexibility{
+  background: linear-gradient(to right, #63A4FF,#83EAF1);
+}
+#breathing span{
+  border: 1px solid #e91e63;
+  padding: 5px;
+}
+#meditation span{
+  border: 1px solid #cddc39;
+  padding: 5px;
+}
+#flexibility span{
+  border: 1px solid #00bcd4;
+  padding: 5px;
+}
+.gallery-section{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+.pic-top{
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+}
+.pic-section{
+    width: 50%;
+    display: flex;
+    justify-items: flex-start;
+    display: row;
+}
+.Ypic{
+    width: 50%;
+    height: 300px;
+}
+.Ypic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media(max-width:420px){
+  .top-section{
+    height: 330px;
+    width: 100%;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  .nav{
+    height: 65px;
+  }
+  .top-content{
+    width: 100%;
+    height: 220px;
+  }
+  .top-container{
+    height: 200px;
+    top:-200px;
+    left: 60px;
+    
+  }
+  .top-text h2{
+    font-size: 26px;
+    margin-top: 10px;
+  }
+  .top-text p{
+    color: #fff;
+    margin-top: 15px;
+    letter-spacing: 2px;
+    font-size: 12px;
+    line-height: 14px;
+  } 
+  header{
+    width: 100%;
+    height: 200px;
+    z-index: 2;
+  }
+  .menu-toggle{
+    top: 20px;
+	  left: 290px;
+    font-size: 18px;
+  }
+  .overlay{
+    width: 100%;
+    height: 400px;
+  }
+  .A-section{
+    height: 650px;
+  }
+  .top-section-card{
+    width: 100%;
+    height: 650px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+  
+  }
+  .yoga-card{
+    width: 250px;
+    height: 200px;
+    margin-left: 45px;
+    margin-bottom: 20px;
+  }
+  .yoga-card .poster img{
+    height: 200px;
+  }
+  .details h3{
+    font-size: 12px;
+    width: 200px;
+    color: #222;
+  }
+  .details p{
+    font-size: 10px;
+    color: #222;
+    width: 200px;
+  }
+  .mentor{
+    height: 820px;
+  }
+  .mentor h1{
+    font-size: 30px;
+    margin-top: 30px;
+    margin-right: 40px;
+  }
+  .mentor-section{
+    flex-direction: column;
+  }
+  .card{
+    width: 250px;
+    height: 150px; 
+  }
+  .card .circle{
+    border-radius: 10px;
+  }
+  .card .circle::before{
+    clip-path: circle(60px at center);
+  }
+  .card:hover .circle:before{
+    clip-path: circle(200px at center);
+  }
+  .card img{
+    height: 90px;
+  }
+  .card:hover img{
+    height:20px;
+  }
+  .card .content1{
+    width: 100%;
+  }
+  .card .content1 h2{
+    font-size: 14px;
+  }
+  .card .content1 p{
+    color: #fff;
+    font-size: 10px;
+  }
+  .card{
+    width: auto;
+    max-width: 270px;
+    align-items: flex-start;
+    margin: 10px;
+    margin-left: 20px;
+  }
+  .card:hover{
+    height: 300px;
+  }
+  .card:hover img{
+    height: 120px;
+  }
+  .mid-section{
+    display: flex;
+    flex-direction: column;
+      width: 100%;
+      height: 1400px;
+  }
+  .left-section{
+    width: 100%;
+    margin-left: 0px;
+  }
+  .lstext:nth-child(1){
+    font-size: 16px;
+  }
+  .lstext{
+    font-size: 26px;
+  }
+  .wd{
+    width: 55%;
+    font-size: 12px;
+  }
+  .right-section{
+    width: 100%;
+  }
+  .right-section h3{
+    font-size: 16px;
+  }
+  .right-section h2{
+    font-size: 26px;
+  }
+  .right-section p{
+    font-size: 16px;
+  }
+  .rstext{
+    margin-left: 50px;
+  }
+  .progress{
+    height: 7px;
+  }
+  .progress .progress-bar{
+    height: 7px;
+  }
+  .progress-bar span{
+    height: 20px;
+    width: 20px;
+    font-size: 12px;
+  }
+  .gallery-section{
+    height: 800px;
+  }
+  .Ypic{
+    width: 50%;
+    height: 200px;
+  }
+  .pic-top{
+    flex-direction: column;
+    height: 400px;
+  }
+  .pic-section{
+    width: 100%;
+  }
+}
